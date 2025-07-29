@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawad Yaics - Computer Science Student</title>
+    <meta name="description" content="Jawad Yaics - BSCS student at FAST University documenting his journey through Computer Science, sharing assignments, notes, and milestones.">
+    <meta name="keywords" content="Jawad Yaics, Computer Science, FAST University, Programming, Student Portfolio">
+    <meta name="author" content="Jawad Yaics">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Jawad Yaics - Computer Science Student">
+    <meta property="og:description" content="Documenting my journey through Computer Science, one step at a time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jawadyaics.github.io">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jawad Yaics - Computer Science Student">
+    <meta name="twitter:description" content="Documenting my journey through Computer Science, one step at a time.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Jawad Yaics</a></li>
+                <li><a href="learn-log.html">Learn Log</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center;">
+                <div class="hero-content text-left">
+                    <h1 class="heading-gradient fade-in">Jawad Yaics</h1>
+                    <p class="fade-in-delay-1">Documenting my journey through Computer Science, one step at a time.</p>
+                    <p class="fade-in-delay-2">Currently pursuing BSCS at FAST University, sharing my learning experiences, assignments, and milestones to help fellow students and learners.</p>
+                    <div class="flex gap-4 mt-6 fade-in-delay-3">
+                        <a href="learn-log.html" class="btn btn-primary">
+                            <i data-lucide="book-open" class="icon-sm" style="margin-right: 0.5rem;"></i>
+                            Explore My Notes
+                        </a>
+                        <a href="milestones.html" class="btn btn-secondary">
+                            <i data-lucide="award" class="icon-sm" style="margin-right: 0.5rem;"></i>
+                            View Milestones
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image fade-in-delay-2">
+                    <i data-lucide="code" style="width: 4rem; height: 4rem; margin-bottom: 1rem; opacity: 0.7;"></i>
+                    <h3 style="margin-bottom: 0.5rem;">Personal Image</h3>
+                    <p style="color: #666; font-size: 0.9rem;">Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About My Journey Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="container-neutral-beige text-center fade-in">
+                <h2 class="heading-font">About My Journey</h2>
+                <p class="mb-6">I'm a Computer Science student at FAST University, passionate about learning and sharing knowledge. This website serves as my digital notebook where I document my academic journey, share assignments, notes, and celebrate milestones along the way.</p>
+                
+                <div class="grid grid-2 gap-6">
+                    <div class="text-center">
+                        <i data-lucide="book-open" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Academic Focus</h3>
+                        <p>Currently studying Computer Science at FAST University, focusing on programming fundamentals, algorithms, and software development.</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="code" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Learning Path</h3>
+                        <p>Supplementing university education with online courses like CS50 Python, constantly expanding my knowledge and skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Can I Help You Section -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-highlight-blue text-center fade-in">
+                <h2 class="heading-font">How can I help you?</h2>
+                <p class="mb-6">Whether you're a fellow student or someone starting their CS journey, here's how my resources might be useful to you.</p>
+                
+                <div class="grid grid-3 gap-6">
+                    <div class="text-center">
+                        <i data-lucide="book-open" class="icon-lg" style="color: var(--foreground); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Study Materials</h3>
+                        <p class="mb-4">Access my organized notes, assignments, and study materials from FAST University and online courses to supplement your learning.</p>
+                        <a href="learn-log.html" class="btn btn-outline">Browse Notes</a>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="lightbulb" class="icon-lg" style="color: var(--foreground); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Learning Inspiration</h3>
+                        <p class="mb-4">Follow my learning journey and milestones to stay motivated in your own Computer Science studies and certification pursuits.</p>
+                        <a href="milestones.html" class="btn btn-outline">View Milestones</a>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="users" class="icon-lg" style="color: var(--foreground); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Connect & Learn</h3>
+                        <p class="mb-4">Reach out to discuss Computer Science topics, share learning experiences, or collaborate on academic projects.</p>
+                        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join My Learning Journey Section -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-golden-highlight text-center fade-in">
+                <h2 class="heading-font">Join My Learning Journey</h2>
+                <p class="mb-6">Follow along as I document my Computer Science studies, share insights, and build a comprehensive resource for fellow learners.</p>
+                
+                <div class="grid grid-3 gap-6">
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="calendar" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Regular Updates</h3>
+                        <p>New assignments, notes, and learning materials added weekly as I progress through my studies.</p>
+                    </div>
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="share-2" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Knowledge Sharing</h3>
+                        <p>Open-source approach to learning - all resources are freely available to help fellow students.</p>
+                    </div>
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="target" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Goal-Oriented</h3>
+                        <p>Tracking progress through certifications, projects, and academic achievements.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i data-lucide="mail" class="icon-sm" style="margin-right: 0.5rem;"></i>
+                        Stay Connected
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="heading-font">Jawad Yaics</h3>
+                    <p>Computer Science student at FAST University, documenting my learning journey and sharing resources with fellow students.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/jawadyaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-jawad-86616a27b/" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jawad.yaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Jawad_yaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="learn-log.html">Learn Log</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="learn-log.html">FAST University Notes</a></li>
+                        <li><a href="learn-log.html">CS50 Python Materials</a></li>
+                        <li><a href="milestones.html">Certifications</a></li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i data-lucide="mail" class="icon-sm"></i> jawad.yaics@gmail.com</li>
+                        <li><i data-lucide="map-pin" class="icon-sm"></i> Karachi, Pakistan</li>
+                        <li><i data-lucide="graduation-cap" class="icon-sm"></i> FAST University</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jawad Yaics. All rights reserved. Built with passion for learning and sharing knowledge.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
