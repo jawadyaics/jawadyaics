@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestones - Jawad Yaics</title>
+    <meta name="description" content="Follow Jawad Yaics' learning journey through certifications and achievements from top institutions like Harvard, Coursera, Google, and Yale.">
+    <meta name="keywords" content="Certifications, Harvard CS50, Coursera, Google Certificates, Yale, Computer Science Learning">
+    <meta name="author" content="Jawad Yaics">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Milestones - Jawad Yaics">
+    <meta property="og:description" content="Learning journey through certifications and achievements from top institutions.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Jawad Yaics</a></li>
+                <li><a href="learn-log.html">Learn Log</a></li>
+                <li><a href="milestones.html" class="active">Milestones</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="heading-gradient fade-in">Milestones</h1>
+                <p class="fade-in-delay-1">My journey of continuous learning through certifications and achievements from top institutions and platforms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Overview -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-rich-beige text-center">
+                <h2 class="heading-font" style="color: white; margin-bottom: 2rem;">Learning Progress</h2>
+                <div class="grid grid-4 gap-6">
+                    <div class="text-center">
+                        <div style="font-size: 3rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">6</div>
+                        <p style="color: rgba(255,255,255,0.9); font-weight: 500;">Total Courses</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="font-size: 3rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">3</div>
+                        <p style="color: rgba(255,255,255,0.9); font-weight: 500;">Completed</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="font-size: 3rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">2</div>
+                        <p style="color: rgba(255,255,255,0.9); font-weight: 500;">In Progress</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="font-size: 3rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">1</div>
+                        <p style="color: rgba(255,255,255,0.9); font-weight: 500;">Coming Soon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-highlight-blue">
+                <div class="flex gap-2 flex-wrap justify-center">
+                    <button class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByInstitution('all')" id="filter-all">
+                        All Institutions
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">6</span>
+                    </button>
+                    <button class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByInstitution('Harvard')" id="filter-harvard">
+                        Harvard
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">1</span>
+                    </button>
+                    <button class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByInstitution('Coursera')" id="filter-coursera">
+                        Coursera
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">2</span>
+                    </button>
+                    <button class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByInstitution('Google')" id="filter-google">
+                        Google
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">2</span>
+                    </button>
+                    <button class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByInstitution('Yale')" id="filter-yale">
+                        Yale
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">1</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div id="certificationsGrid" class="grid grid-3 gap-6">
+                <!-- Harvard Certification -->
+                <div class="container-rich-beige fade-in certification-item" data-institution="Harvard" data-status="coming-soon">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="star" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Featured</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">Harvard</p>
+                        </div>
+                        <div style="margin-left: auto;">
+                            <span style="padding: 0.25rem 0.75rem; background: rgba(255,255,255,0.2); border-radius: 9999px; font-size: 0.75rem; color: white; font-weight: 500;">Coming Soon</span>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">CS50's Introduction to Computer Science</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">Harvard University's introduction to the intellectual enterprises of computer science and the art of programming.</p>
+                    <div style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">
+                        <i data-lucide="calendar" style="width: 1rem; height: 1rem; display: inline; margin-right: 0.5rem;"></i>
+                        Expected 2024
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Python</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">C</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">SQL</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">+2</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="clock" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Coming Soon
+                    </button>
+                </div>
+
+                <!-- Coursera Certifications -->
+                <div class="container-primary-blue fade-in-delay-1 certification-item" data-institution="Coursera" data-status="completed">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="check-circle" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Completed</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">Coursera</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">Python for Everybody Specialization</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">Comprehensive Python programming specialization covering data structures, web scraping, databases, and data visualization.</p>
+                    <div style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">
+                        <i data-lucide="calendar" style="width: 1rem; height: 1rem; display: inline; margin-right: 0.5rem;"></i>
+                        January 2024
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Python</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Data Analysis</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Web Scraping</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">+1</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="external-link" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        View Certificate
+                    </button>
+                </div>
+
+                <!-- Google Certifications -->
+                <div class="container-highlight-blue fade-in-delay-2 certification-item" data-institution="Google" data-status="in-progress">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="clock" style="color: var(--foreground); width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(0,0,0,0.7);">In Progress</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: var(--foreground); margin: 0;">Google</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: var(--foreground); margin-bottom: 0.75rem;">Google IT Support Professional Certificate</h3>
+                    <p style="color: rgba(0,0,0,0.7); font-size: 0.875rem; margin-bottom: 1rem;">Professional certificate covering IT fundamentals, networking, operating systems, system administration, and security.</p>
+                    <div style="color: rgba(0,0,0,0.7); font-size: 0.875rem; margin-bottom: 1rem;">
+                        <i data-lucide="calendar" style="width: 1rem; height: 1rem; display: inline; margin-right: 0.5rem;"></i>
+                        Expected March 2024
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">IT Support</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Networking</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Linux</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">+1</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(0,0,0,0.1); color: var(--foreground); border: 2px solid rgba(0,0,0,0.2);">
+                        <i data-lucide="external-link" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        View Certificate
+                    </button>
+                </div>
+
+                <!-- Yale Certification -->
+                <div class="container-golden-highlight fade-in certification-item" data-institution="Yale" data-status="completed">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(0,0,0,0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="check-circle" style="color: var(--foreground); width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(0,0,0,0.7);">Completed</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: var(--foreground); margin: 0;">Yale</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: var(--foreground); margin-bottom: 0.75rem;">Introduction to Psychology</h3>
+                    <p style="color: rgba(0,0,0,0.7); font-size: 0.875rem; margin-bottom: 1rem;">Yale University's comprehensive introduction to the study of the human mind and behavior.</p>
+                    <div style="color: rgba(0,0,0,0.7); font-size: 0.875rem; margin-bottom: 1rem;">
+                        <i data-lucide="calendar" style="width: 1rem; height: 1rem; display: inline; margin-right: 0.5rem;"></i>
+                        December 2023
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Psychology</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Research Methods</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Critical Thinking</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(0,0,0,0.1); color: var(--foreground); border: 2px solid rgba(0,0,0,0.2);">
+                        <i data-lucide="external-link" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        View Certificate
+                    </button>
+                </div>
+
+                <!-- More Coursera -->
+                <div class="container-rich-beige fade-in-delay-1 certification-item" data-institution="Coursera" data-status="in-progress">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="star" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Featured</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">Coursera</p>
+                        </div>
+                        <div style="margin-left: auto;">
+                            <span style="padding: 0.25rem 0.75rem; background: rgba(255,255,255,0.2); border-radius: 9999px; font-size: 0.75rem; color: white; font-weight: 500;">In Progress</span>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">Machine Learning Specialization</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">Andrew Ng's comprehensive machine learning course covering supervised and unsupervised learning algorithms.</p>
+                    <div style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">
+                        <i data-lucide="calendar" style="width: 1rem; height: 1rem; display: inline; margin-right: 0.5rem;"></i>
+                        Expected April 2024
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Machine Learning</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Python</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">TensorFlow</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">+1</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="external-link" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        View Certificate
+                    </button>
+                </div>
+
+                <!-- More Google -->
+                <div class="container-highlight-blue fade-in-delay-2 certification-item" data-institution="Google" data-status="completed">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="check-circle" style="color: var(--foreground); width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(0,0,0,0.7);">Completed</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: var(--foreground); margin: 0;">Google</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: var(--foreground); margin-bottom: 0.75rem;">Google Data Analytics Professional Certificate</h3>
+                    <p style="color: rgba(0,0,0,0.7); font-size: 0.875rem; margin-bottom: 1rem;">Professional certificate in data analytics covering data cleaning, analysis, and visualization using industry-standard tools.</p>
+                    <div style="color: rgba(0,0,0,0.7); font-size: 0.875rem; margin-bottom: 1rem;">
+                        <i data-lucide="calendar" style="width: 1rem; height: 1rem; display: inline; margin-right: 0.5rem;"></i>
+                        November 2023
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Data Analysis</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">SQL</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Tableau</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">+2</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(0,0,0,0.1); color: var(--foreground); border: 2px solid rgba(0,0,0,0.2);">
+                        <i data-lucide="external-link" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        View Certificate
+                    </button>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="text-center py-12 hidden">
+                <i data-lucide="award" style="width: 4rem; height: 4rem; color: var(--muted-foreground); margin: 0 auto 1rem;"></i>
+                <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">No certifications found</h3>
+                <p style="color: var(--muted-foreground);">Try selecting a different institution filter.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Learning Plans -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-golden-highlight text-center">
+                <h2 class="heading-font">Future Learning Plans</h2>
+                <p class="mb-6">Continuously expanding my knowledge and skills through structured learning paths and industry-recognized certifications.</p>
+                <div class="grid grid-3 gap-6">
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="code" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Advanced CS</h3>
+                        <p>Advanced computer science topics and specialized domains</p>
+                    </div>
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="award" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Industry Certs</h3>
+                        <p>Professional certifications from leading tech companies</p>
+                    </div>
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="brain" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Specializations</h3>
+                        <p>Deep dive into AI, machine learning, and data science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="heading-font">Jawad Yaics</h3>
+                    <p>Computer Science student at FAST University, documenting my learning journey and sharing resources with fellow students.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/jawadyaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-jawad-86616a27b/" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jawad.yaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Jawad_yaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="learn-log.html">Learn Log</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="learn-log.html">FAST University Notes</a></li>
+                        <li><a href="learn-log.html">CS50 Python Materials</a></li>
+                        <li><a href="milestones.html">Certifications</a></li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i data-lucide="mail" class="icon-sm"></i> jawad.yaics@gmail.com</li>
+                        <li><i data-lucide="map-pin" class="icon-sm"></i> Karachi, Pakistan</li>
+                        <li><i data-lucide="graduation-cap" class="icon-sm"></i> FAST University</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jawad Yaics. All rights reserved. Built with passion for learning and sharing knowledge.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Filter functionality
+        let currentFilter = 'all';
+
+        function filterByInstitution(institution) {
+            currentFilter = institution;
+            
+            // Update button states
+            document.querySelectorAll('[id^="filter-"]').forEach(btn => {
+                btn.className = 'btn btn-outline';
+                btn.style.background = 'rgba(255,255,255,0.1)';
+                btn.style.color = 'white';
+                btn.style.border = '2px solid rgba(255,255,255,0.3)';
+            });
+            
+            const activeBtn = document.getElementById('filter-' + (institution === 'all' ? 'all' : institution.toLowerCase()));
+            if (activeBtn) {
+                activeBtn.className = 'btn';
+                activeBtn.style.background = 'rgba(255,255,255,0.2)';
+                activeBtn.style.color = 'white';
+                activeBtn.style.border = '2px solid rgba(255,255,255,0.3)';
+            }
+            
+            filterCertifications();
+        }
+
+        function filterCertifications() {
+            const certifications = document.querySelectorAll('.certification-item');
+            let visibleCount = 0;
+
+            certifications.forEach(cert => {
+                const institution = cert.getAttribute('data-institution');
+                const matchesFilter = currentFilter === 'all' || institution === currentFilter;
+
+                if (matchesFilter) {
+                    cert.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    cert.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            const noResults = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+

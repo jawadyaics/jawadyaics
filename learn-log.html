@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Log - Jawad Yaics</title>
+    <meta name="description" content="Access Jawad Yaics' comprehensive collection of assignments, notes, and study materials from FAST University and online courses.">
+    <meta name="keywords" content="Computer Science Notes, FAST University, CS50 Python, Programming Assignments, Study Materials">
+    <meta name="author" content="Jawad Yaics">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Learn Log - Jawad Yaics">
+    <meta property="og:description" content="Comprehensive collection of assignments, notes, and study materials from FAST University and online courses.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Jawad Yaics</a></li>
+                <li><a href="learn-log.html" class="active">Learn Log</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="heading-gradient fade-in">Learn Log</h1>
+                <p class="fade-in-delay-1">A comprehensive collection of my assignments, notes, and study materials from FAST University and online courses. Free resources to help fellow students.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-highlight-blue">
+                <div class="flex flex-col gap-4">
+                    <div class="flex gap-4 items-center">
+                        <div class="flex-1" style="position: relative;">
+                            <i data-lucide="search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #666; width: 1rem; height: 1rem;"></i>
+                            <input type="text" id="searchInput" class="form-input" placeholder="Search resources, topics, or tags..." style="padding-left: 2.5rem; background: rgba(255,255,255,0.9); border: 2px solid rgba(255,255,255,0.2);" onkeyup="filterResources()">
+                        </div>
+                    </div>
+                    <div class="filter-buttons-wrapper">
+                    <div class="filter-buttons-container">
+                        <!-- Keep all your existing buttons here with their exact same content and styling -->
+                        <button class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByType('all')" id="filter-all">
+                        All Resources
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">12</span>
+                        </button>
+                        <button class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByType('FAST University')" id="filter-fast">
+                        FAST University
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">6</span>
+                        </button>
+                        <button class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByType('CS50 Python')" id="filter-cs50">
+                        CS50 Python
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">4</span>
+                        </button>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Grid -->
+    <section class="section-padding" id="main-content">
+        <div class="container">
+            <div id="resourcesGrid" class="grid grid-3 gap-6">
+                <!-- FAST University Resources -->
+                <div class="container-primary-blue fade-in resource-item" data-category="FAST University" data-tags="data structures algorithms c++">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="file-text" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Assignment</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">FAST University</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">Data Structures and Algorithms - Assignment 1</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">Implementation of basic data structures including arrays, linked lists, and stacks with complexity analysis.</p>
+                    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
+                        <span>📅 1/15/2024</span>
+                        <span>📄 PDF</span>
+                        <span>💾 2.3 MB</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Data Structures</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Algorithms</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">C++</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="download" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Download
+                    </button>
+                </div>
+
+                <div class="container-primary-blue fade-in-delay-1 resource-item" data-category="FAST University" data-tags="oop java programming">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="file-text" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Lab Report</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">FAST University</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">Object-Oriented Programming Lab Report</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">Comprehensive lab report covering inheritance, polymorphism, and encapsulation concepts with practical examples.</p>
+                    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
+                        <span>📅 1/20/2024</span>
+                        <span>📄 PDF</span>
+                        <span>💾 1.8 MB</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">OOP</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Java</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Programming</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="download" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Download
+                    </button>
+                </div>
+
+                <!-- CS50 Python Resources -->
+                <div class="container-deep-blue fade-in-delay-2 resource-item" data-category="CS50 Python" data-tags="python basics harvard">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="book-open" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Notes</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">CS50 Python</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">CS50 Python - Week 1 Notes</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">Detailed notes on Python basics, variables, conditionals, and loops from Harvard's CS50 Python course.</p>
+                    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
+                        <span>📅 1/10/2024</span>
+                        <span>📄 PDF</span>
+                        <span>💾 1.2 MB</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Python</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Basics</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Harvard</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="download" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Download
+                    </button>
+                </div>
+
+                <div class="container-primary-blue fade-in resource-item" data-category="FAST University" data-tags="database er diagram sql">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="file-text" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Assignment</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">FAST University</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">Database Systems - ER Diagram Assignment</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">Entity-Relationship diagram design for a university management system with normalization techniques.</p>
+                    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
+                        <span>📅 1/25/2024</span>
+                        <span>📄 PDF</span>
+                        <span>💾 3.1 MB</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Database</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">ER Diagram</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">SQL</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="download" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Download
+                    </button>
+                </div>
+
+                <div class="container-deep-blue fade-in-delay-1 resource-item" data-category="CS50 Python" data-tags="python problem set algorithms">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="code" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Code</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">CS50 Python</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">CS50 Python - Problem Set 2 Solutions</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">Complete solutions and explanations for CS50 Python Problem Set 2 including readability and substitution cipher.</p>
+                    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
+                        <span>📅 1/18/2024</span>
+                        <span>📄 ZIP</span>
+                        <span>💾 856 KB</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Python</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Problem Set</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Algorithms</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="download" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Download
+                    </button>
+                </div>
+
+                <div class="container-primary-blue fade-in-delay-2 resource-item" data-category="FAST University" data-tags="networks tcp/ip protocols">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="book-open" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Study Guide</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">FAST University</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">Computer Networks - TCP/IP Study Guide</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">Comprehensive study guide covering TCP/IP protocol suite, OSI model, and network troubleshooting.</p>
+                    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
+                        <span>📅 1/30/2024</span>
+                        <span>📄 PDF</span>
+                        <span>💾 4.2 MB</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Networks</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">TCP/IP</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Protocols</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="download" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Download
+                    </button>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="text-center py-12 hidden">
+                <i data-lucide="book-open" style="width: 4rem; height: 4rem; color: var(--muted-foreground); margin: 0 auto 1rem;"></i>
+                <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">No resources found</h3>
+                <p style="color: var(--muted-foreground);">Try adjusting your search terms or category filter.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-golden-highlight text-center">
+                <h2 class="heading-font">More Resources Coming Soon</h2>
+                <p class="mb-6">I'm continuously adding new assignments, notes, and study materials. Check back regularly for updates, or connect with me to request specific topics.</p>
+                <div class="grid grid-3 gap-6">
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="code" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Advanced Programming</h3>
+                        <p>Data structures, algorithms, and software engineering projects</p>
+                    </div>
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="book-open" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Course Notes</h3>
+                        <p>Comprehensive notes from various CS courses and online learning</p>
+                    </div>
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="file-text" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Research Papers</h3>
+                        <p>Academic research and project documentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="heading-font">Jawad Yaics</h3>
+                    <p>Computer Science student at FAST University, documenting my learning journey and sharing resources with fellow students.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/jawadyaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-jawad-86616a27b/" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jawad.yaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Jawad_yaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="learn-log.html">Learn Log</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="learn-log.html">FAST University Notes</a></li>
+                        <li><a href="learn-log.html">CS50 Python Materials</a></li>
+                        <li><a href="milestones.html">Certifications</a></li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i data-lucide="mail" class="icon-sm"></i> jawad.yaics@gmail.com</li>
+                        <li><i data-lucide="map-pin" class="icon-sm"></i> Karachi, Pakistan</li>
+                        <li><i data-lucide="graduation-cap" class="icon-sm"></i> FAST University</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jawad Yaics. All rights reserved. Built with passion for learning and sharing knowledge.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Filter functionality
+        let currentFilter = 'all';
+
+        function filterByCategory(category) {
+            currentFilter = category;
+            
+            // Update button states
+            document.querySelectorAll('[id^="filter-"]').forEach(btn => {
+                btn.className = 'btn btn-outline';
+                btn.style.background = 'rgba(255,255,255,0.1)';
+                btn.style.color = 'white';
+                btn.style.border = '2px solid rgba(255,255,255,0.3)';
+            });
+            
+            const activeBtn = document.getElementById('filter-' + (category === 'all' ? 'all' : category.toLowerCase().replace(' ', '')));
+            if (activeBtn) {
+                activeBtn.className = 'btn';
+                activeBtn.style.background = 'rgba(255,255,255,0.2)';
+                activeBtn.style.color = 'white';
+                activeBtn.style.border = '2px solid rgba(255,255,255,0.3)';
+            }
+            
+            filterResources();
+        }
+
+        function filterResources() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const resources = document.querySelectorAll('.resource-item');
+            let visibleCount = 0;
+
+            resources.forEach(resource => {
+                const category = resource.getAttribute('data-category');
+                const tags = resource.getAttribute('data-tags');
+                const title = resource.querySelector('h3').textContent.toLowerCase();
+                const description = resource.querySelector('p').textContent.toLowerCase();
+
+                const matchesCategory = currentFilter === 'all' || category === currentFilter;
+                const matchesSearch = searchTerm === '' || 
+                    title.includes(searchTerm) || 
+                    description.includes(searchTerm) || 
+                    tags.includes(searchTerm);
+
+                if (matchesCategory && matchesSearch) {
+                    resource.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    resource.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            const noResults = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jawad Yaics</title>
+    <meta name="description" content="Get in touch with Jawad Yaics for collaborations, questions, or discussions about Computer Science and programming.">
+    <meta name="keywords" content="Contact, Jawad Yaics, Computer Science, Collaboration, Programming, FAST University">
+    <meta name="author" content="Jawad Yaics">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact - Jawad Yaics">
+    <meta property="og:description" content="Get in touch for collaborations, questions, or discussions about Computer Science.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Jawad Yaics</a></li>
+                <li><a href="learn-log.html">Learn Log</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="heading-gradient fade-in">Contact</h1>
+                <p class="fade-in-delay-1">Let's connect! Whether you want to collaborate on a project, discuss computer science topics, or just say hello, I'd love to hear from you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form and Info -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid grid-2 gap-8">
+                <!-- Contact Form -->
+                <div class="container-primary-blue">
+                    <h2 class="heading-font" style="color: white; margin-bottom: 1.5rem;">Send me a message</h2>
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name" class="form-label" style="color: white;">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required style="background: rgba(255,255,255,0.9); border: 2px solid rgba(255,255,255,0.2);">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label" style="color: white;">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required style="background: rgba(255,255,255,0.9); border: 2px solid rgba(255,255,255,0.2);">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label" style="color: white;">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required style="background: rgba(255,255,255,0.9); border: 2px solid rgba(255,255,255,0.2);">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label" style="color: white;">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required style="background: rgba(255,255,255,0.9); border: 2px solid rgba(255,255,255,0.2);"></textarea>
+                        </div>
+                        <button type="submit" class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                            <i data-lucide="send" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="container-highlight-blue">
+                    <h2 class="heading-font" style="margin-bottom: 1.5rem;">Follow me</h2>
+                    <p style="margin-bottom: 2rem; color: rgba(0,0,0,0.7);">Connect with me on social media to stay updated with my latest projects and learning journey.</p>
+                    
+                    <div class="grid grid-2 gap-4">
+                        <a href="https://github.com/jawadyaics" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-lg" style="background: rgba(255,255,255,0.3); text-decoration: none; color: var(--foreground); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.5)'" onmouseout="this.style.background='rgba(255,255,255,0.3)'">
+                            <div style="width: 2.5rem; height: 2.5rem; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i data-lucide="github" style="color: white; width: 1.25rem; height: 1.25rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0; font-weight: 600;">GitHub</h4>
+                                <p style="margin: 0; font-size: 0.875rem; color: rgba(0,0,0,0.7);">@jawadyaics</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/muhammad-jawad-86616a27b/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-lg" style="background: rgba(255,255,255,0.3); text-decoration: none; color: var(--foreground); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.5)'" onmouseout="this.style.background='rgba(255,255,255,0.3)'">
+                            <div style="width: 2.5rem; height: 2.5rem; background: #0077B5; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i data-lucide="linkedin" style="color: white; width: 1.25rem; height: 1.25rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0; font-weight: 600;">LinkedIn</h4>
+                                <p style="margin: 0; font-size: 0.875rem; color: rgba(0,0,0,0.7);">Muhammad Jawad</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.instagram.com/jawad.yaics" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-lg" style="background: rgba(255,255,255,0.3); text-decoration: none; color: var(--foreground); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.5)'" onmouseout="this.style.background='rgba(255,255,255,0.3)'">
+                            <div style="width: 2.5rem; height: 2.5rem; background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i data-lucide="instagram" style="color: white; width: 1.25rem; height: 1.25rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0; font-weight: 600;">Instagram</h4>
+                                <p style="margin: 0; font-size: 0.875rem; color: rgba(0,0,0,0.7);">@jawad.yaics</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.youtube.com/@Jawad_yaics" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-lg" style="background: rgba(255,255,255,0.3); text-decoration: none; color: var(--foreground); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.5)'" onmouseout="this.style.background='rgba(255,255,255,0.3)'">
+                            <div style="width: 2.5rem; height: 2.5rem; background: #FF0000; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i data-lucide="youtube" style="color: white; width: 1.25rem; height: 1.25rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0; font-weight: 600;">YouTube</h4>
+                                <p style="margin: 0; font-size: 0.875rem; color: rgba(0,0,0,0.7);">@Jawad_yaics</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <p style="margin-top: 1.5rem; color: rgba(0,0,0,0.7); font-size: 0.875rem;">Connect with me on social media to stay updated with my latest projects and learning journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-neutral-beige">
+                <h2 class="heading-font text-center mb-6">Get in touch</h2>
+                <div class="grid grid-3 gap-6">
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="mail" style="color: white; width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h3 class="heading-font">Email</h3>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">jawad.yaics@gmail.com</p>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">Best way to reach me for collaborations and opportunities</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--rich-beige); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="map-pin" style="color: white; width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h3 class="heading-font">Location</h3>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Karachi, Pakistan</p>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">Currently studying at FAST University</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--deep-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="clock" style="color: white; width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h3 class="heading-font">Response Time</h3>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Within 24 hours</p>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">I typically respond to messages within a day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-golden-highlight">
+                <h2 class="heading-font text-center mb-6">Frequently Asked Questions</h2>
+                <div class="grid grid-2 gap-6">
+                    <div class="container-neutral-beige">
+                        <h3 class="heading-font mb-3">What's the best way to contact you?</h3>
+                        <p style="color: var(--muted-foreground);">Email is the most reliable way to reach me. I check my emails regularly and respond within 24 hours.</p>
+                    </div>
+                    <div class="container-neutral-beige">
+                        <h3 class="heading-font mb-3">Are you available for freelance projects?</h3>
+                        <p style="color: var(--muted-foreground);">I'm currently focused on my studies, but I'm open to discussing interesting projects that align with my learning goals.</p>
+                    </div>
+                    <div class="container-neutral-beige">
+                        <h3 class="heading-font mb-3">Can you help with my computer science assignments?</h3>
+                        <p style="color: var(--muted-foreground);">I'm happy to provide guidance and share resources, but I encourage independent learning and academic integrity.</p>
+                    </div>
+                    <div class="container-neutral-beige">
+                        <h3 class="heading-font mb-3">Do you offer tutoring services?</h3>
+                        <p style="color: var(--muted-foreground);">I occasionally help fellow students with CS concepts. Feel free to reach out if you need study guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-deep-blue text-center">
+                <h2 class="heading-font" style="color: white; margin-bottom: 1rem;">Ready to collaborate?</h2>
+                <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">I'm always excited to work on interesting projects and connect with fellow developers and learners. Let's build something amazing together!</p>
+                <div class="flex gap-4 justify-center">
+                    <a href="mailto:jawad.yaics@gmail.com" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="mail" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhammad-jawad-86616a27b/" target="_blank" rel="noopener noreferrer" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="linkedin" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="heading-font">Jawad Yaics</h3>
+                    <p>Computer Science student at FAST University, documenting my learning journey and sharing resources with fellow students.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/jawadyaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-jawad-86616a27b/" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jawad.yaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Jawad_yaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="learn-log.html">Learn Log</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="learn-log.html">FAST University Notes</a></li>
+                        <li><a href="learn-log.html">CS50 Python Materials</a></li>
+                        <li><a href="milestones.html">Certifications</a></li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i data-lucide="mail" class="icon-sm"></i> jawad.yaics@gmail.com</li>
+                        <li><i data-lucide="map-pin" class="icon-sm"></i> Karachi, Pakistan</li>
+                        <li><i data-lucide="graduation-cap" class="icon-sm"></i> FAST University</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jawad Yaics. All rights reserved. Built with passion for learning and sharing knowledge.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Contact form handling
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message
+            const button = form.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<i data-lucide="check" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>Message Sent!';
+            button.disabled = true;
+            
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                form.reset();
+                button.innerHTML = originalText;
+                button.disabled = false;
+                lucide.createIcons();
+            }, 3000);
+            
+            // In a real application, you would send the data to a server
+            console.log('Form submitted:', data);
+        }
+    </script>
+</body>
+</html>
+

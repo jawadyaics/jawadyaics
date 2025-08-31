@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jawad Yaics</title>
+    <meta name="description" content="Explore Jawad Yaics' portfolio of software development projects, including web applications, AI/ML solutions, and mobile apps.">
+    <meta name="keywords" content="Portfolio, Software Development, Web Development, AI, Machine Learning, Mobile Apps, Computer Science Projects">
+    <meta name="author" content="Jawad Yaics">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Portfolio - Jawad Yaics">
+    <meta property="og:description" content="Software development projects and innovative solutions by a Computer Science student.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Jawad Yaics</a></li>
+                <li><a href="learn-log.html">Learn Log</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="heading-gradient fade-in">Portfolio</h1>
+                <p class="fade-in-delay-1">Showcasing my journey in software development and computer science through practical projects and innovative solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Under Development -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-highlight-blue text-center">
+                <h2 class="heading-font">Portfolio Under Development</h2>
+                <p class="mb-6">I'm currently working on exciting projects that will be showcased here soon. As a BSCS student at FAST University, I'm building innovative solutions that combine my academic learning with practical development skills.</p>
+                <div class="grid grid-3 gap-6">
+                    <div class="text-center">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--foreground); margin-bottom: 0.5rem;">March 2024</div>
+                        <p style="color: rgba(0,0,0,0.7); font-weight: 500;">Expected Launch</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--foreground); margin-bottom: 0.5rem;">6+</div>
+                        <p style="color: rgba(0,0,0,0.7); font-weight: 500;">Projects in Development</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--foreground); margin-bottom: 0.5rem;">4</div>
+                        <p style="color: rgba(0,0,0,0.7); font-weight: 500;">Technology Stacks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-highlight-blue">
+                <div class="flex gap-2 flex-wrap justify-center">
+                    <button class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByCategory('all')" id="filter-all">
+                        All Projects
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">6</span>
+                    </button>
+                    <button class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByCategory('Web Development')" id="filter-web">
+                        Web Development
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">3</span>
+                    </button>
+                    <button class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByCategory('AI/ML')" id="filter-ai">
+                        AI/ML
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">1</span>
+                    </button>
+                    <button class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByCategory('Mobile')" id="filter-mobile">
+                        Mobile
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">1</span>
+                    </button>
+                    <button class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);" onclick="filterByCategory('Data Science')" id="filter-data">
+                        Data Science
+                        <span class="badge" style="margin-left: 0.5rem; background: rgba(255,255,255,0.3); color: white; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem;">1</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div id="projectsGrid" class="grid grid-3 gap-6">
+                <!-- Web Development Projects -->
+                <div class="container-rich-beige fade-in project-item" data-category="Web Development" data-status="coming-soon">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="star" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Featured Project</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">Web Development</p>
+                        </div>
+                        <div style="margin-left: auto;">
+                            <span style="padding: 0.25rem 0.75rem; background: rgba(255,255,255,0.2); border-radius: 9999px; font-size: 0.75rem; color: white; font-weight: 500;">Coming Soon</span>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">University Management System</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">A comprehensive web-based system for managing university operations including student enrollment, course management, and academic records.</p>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">React</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Node.js</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">MongoDB</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">+1</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="clock" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Coming Soon
+                    </button>
+                </div>
+
+                <div class="container-rich-beige fade-in-delay-1 project-item" data-category="AI/ML" data-status="coming-soon">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="star" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Featured Project</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">AI/ML</p>
+                        </div>
+                        <div style="margin-left: auto;">
+                            <span style="padding: 0.25rem 0.75rem; background: rgba(255,255,255,0.2); border-radius: 9999px; font-size: 0.75rem; color: white; font-weight: 500;">Coming Soon</span>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">AI Study Assistant</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">An intelligent study companion that helps students organize notes, create study schedules, and provides personalized learning recommendations.</p>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Python</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">TensorFlow</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">NLP</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">+1</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="clock" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Coming Soon
+                    </button>
+                </div>
+
+                <div class="container-highlight-blue fade-in-delay-2 project-item" data-category="Mobile" data-status="coming-soon">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="smartphone" style="color: var(--foreground); width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(0,0,0,0.7);">Mobile Development</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: var(--foreground); margin: 0;">Coming Soon</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: var(--foreground); margin-bottom: 0.75rem;">Campus Connect Mobile App</h3>
+                    <p style="color: rgba(0,0,0,0.7); font-size: 0.875rem; margin-bottom: 1rem;">A mobile application connecting university students for study groups, events, and academic collaboration.</p>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">React Native</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Firebase</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Node.js</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(0,0,0,0.1); color: var(--foreground); border: 2px solid rgba(0,0,0,0.2);">
+                        <i data-lucide="clock" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Coming Soon
+                    </button>
+                </div>
+
+                <div class="container-golden-highlight fade-in project-item" data-category="Data Science" data-status="coming-soon">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(0,0,0,0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="bar-chart" style="color: var(--foreground); width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(0,0,0,0.7);">Data Science</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: var(--foreground); margin: 0;">Coming Soon</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: var(--foreground); margin-bottom: 0.75rem;">Data Visualization Dashboard</h3>
+                    <p style="color: rgba(0,0,0,0.7); font-size: 0.875rem; margin-bottom: 1rem;">Interactive dashboard for visualizing academic performance data and generating insights for educational institutions.</p>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Python</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Plotly</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">Pandas</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(0,0,0,0.1); border-radius: 0.375rem; font-size: 0.75rem; color: var(--foreground);">+1</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(0,0,0,0.1); color: var(--foreground); border: 2px solid rgba(0,0,0,0.2);">
+                        <i data-lucide="clock" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Coming Soon
+                    </button>
+                </div>
+
+                <div class="container-primary-blue fade-in-delay-1 project-item" data-category="Web Development" data-status="live">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="globe" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Web Development</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">Live</p>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">Personal Portfolio Website</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">A modern, responsive portfolio website showcasing my journey as a Computer Science student and developer.</p>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">React</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Tailwind CSS</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Vite</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="external-link" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Live Demo
+                    </button>
+                </div>
+
+                <div class="container-rich-beige fade-in-delay-2 project-item" data-category="Web Development" data-status="coming-soon">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div style="width: 2rem; height: 2rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="star" style="color: white; width: 1rem; height: 1rem;"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.8);">Featured Project</span>
+                            <p style="font-size: 0.875rem; font-weight: 600; color: white; margin: 0;">Web Development</p>
+                        </div>
+                        <div style="margin-left: auto;">
+                            <span style="padding: 0.25rem 0.75rem; background: rgba(255,255,255,0.2); border-radius: 9999px; font-size: 0.75rem; color: white; font-weight: 500;">Coming Soon</span>
+                        </div>
+                    </div>
+                    <h3 class="heading-font" style="color: white; margin-bottom: 0.75rem;">Code Learning Platform</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 1rem;">An interactive platform for learning programming concepts with hands-on coding exercises and real-time feedback.</p>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">Next.js</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">TypeScript</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">PostgreSQL</span>
+                        <span style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.2); border-radius: 0.375rem; font-size: 0.75rem; color: white;">+1</span>
+                    </div>
+                    <button class="btn w-full" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                        <i data-lucide="clock" style="margin-right: 0.5rem; width: 1rem; height: 1rem;"></i>
+                        Coming Soon
+                    </button>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="text-center py-12 hidden">
+                <i data-lucide="folder" style="width: 4rem; height: 4rem; color: var(--muted-foreground); margin: 0 auto 1rem;"></i>
+                <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">No projects found</h3>
+                <p style="color: var(--muted-foreground);">Try selecting a different category filter.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Technologies -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-neutral-beige text-center">
+                <h2 class="heading-font">Skills & Technologies</h2>
+                <div class="grid grid-4 gap-6 mt-6">
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--primary-blue); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="code" style="color: white; width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h4 class="heading-font">React</h4>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">Frontend</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--rich-beige); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="server" style="color: white; width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h4 class="heading-font">Python</h4>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">Backend</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--primary-blue); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="code" style="color: white; width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h4 class="heading-font">JavaScript</h4>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">Frontend</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--rich-beige); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="server" style="color: white; width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h4 class="heading-font">Node.js</h4>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">Backend</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--deep-blue); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="database" style="color: white; width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h4 class="heading-font">MongoDB</h4>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">Database</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--highlight-blue); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="brain" style="color: var(--foreground); width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h4 class="heading-font">Machine Learning</h4>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">AI/ML</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--primary-blue); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="git-branch" style="color: white; width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h4 class="heading-font">Git</h4>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">Tools</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="width: 3rem; height: 3rem; background: var(--rich-beige); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i data-lucide="container" style="color: white; width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h4 class="heading-font">Docker</h4>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">DevOps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Coming Next -->
+    <section class="section-padding-sm">
+        <div class="container">
+            <div class="container-golden-highlight text-center">
+                <h2 class="heading-font">What's Coming Next</h2>
+                <p class="mb-6">I'm continuously working on new projects that push the boundaries of my learning and showcase innovative solutions.</p>
+                <div class="grid grid-3 gap-6">
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="globe" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Full-Stack Apps</h3>
+                        <p>Complete web applications with modern frameworks and databases</p>
+                    </div>
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="brain" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">AI Solutions</h3>
+                        <p>Machine learning models and intelligent applications</p>
+                    </div>
+                    <div class="container-neutral-beige text-center">
+                        <i data-lucide="smartphone" class="icon-lg" style="color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3 class="heading-font">Mobile Apps</h3>
+                        <p>Cross-platform mobile applications for real-world problems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="heading-font">Jawad Yaics</h3>
+                    <p>Computer Science student at FAST University, documenting my learning journey and sharing resources with fellow students.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/jawadyaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-jawad-86616a27b/" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jawad.yaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Jawad_yaics" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="learn-log.html">Learn Log</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="learn-log.html">FAST University Notes</a></li>
+                        <li><a href="learn-log.html">CS50 Python Materials</a></li>
+                        <li><a href="milestones.html">Certifications</a></li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-font">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i data-lucide="mail" class="icon-sm"></i> jawad.yaics@gmail.com</li>
+                        <li><i data-lucide="map-pin" class="icon-sm"></i> Karachi, Pakistan</li>
+                        <li><i data-lucide="graduation-cap" class="icon-sm"></i> FAST University</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jawad Yaics. All rights reserved. Built with passion for learning and sharing knowledge.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Filter functionality
+        let currentFilter = 'all';
+
+        function filterByCategory(category) {
+            currentFilter = category;
+            
+            // Update button states
+            document.querySelectorAll('[id^="filter-"]').forEach(btn => {
+                btn.className = 'btn btn-outline';
+                btn.style.background = 'rgba(255,255,255,0.1)';
+                btn.style.color = 'white';
+                btn.style.border = '2px solid rgba(255,255,255,0.3)';
+            });
+            
+            const activeBtn = document.getElementById('filter-' + (category === 'all' ? 'all' : category.toLowerCase().replace('/', '').replace(' ', '')));
+            if (activeBtn) {
+                activeBtn.className = 'btn';
+                activeBtn.style.background = 'rgba(255,255,255,0.2)';
+                activeBtn.style.color = 'white';
+                activeBtn.style.border = '2px solid rgba(255,255,255,0.3)';
+            }
+            
+            filterProjects();
+        }
+
+        function filterProjects() {
+            const projects = document.querySelectorAll('.project-item');
+            let visibleCount = 0;
+
+            projects.forEach(project => {
+                const category = project.getAttribute('data-category');
+                const matchesFilter = currentFilter === 'all' || category === currentFilter;
+
+                if (matchesFilter) {
+                    project.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            const noResults = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+
